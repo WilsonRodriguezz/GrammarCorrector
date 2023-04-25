@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grammar Correction App</title>
+
+    <!--Styles for the app-->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      textarea {
+        width: 98%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type='submit'] {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      h2 {
+        color: #333;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <!--Template-->
+  <body>
+    <h1>Grammar Correction App</h1>
+    <form method="POST">
+      <textarea name="text" rows="10" cols="50">{{ text }}</textarea>
+      <br />
+      <input type="submit" value="Correct" />
+    </form>
+    {% if corrected_text %}
+    <h2>Corrected Text:</h2>
+    {{ corrected_text }} {% endif %}
+  </body>
+</html>
